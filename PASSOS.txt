@@ -1,0 +1,24 @@
+Inicializar um projeto 
+npm init -y
+
+Instalar express
+npm install express --save
+
+Criar arquivo app.js 
+touch app.js 
+
+Criar pasta controller 
+mkdir controller
+
+Excrever os códigos do controller e exportar o módulo 
+let ProdutoController = {
+//Codigos com as funções ...
+}
+module.exports = ProdutoController;
+
+Importar o controller no arquivo app.js 
+const ProdutoController = require('./controllers/ProdutoController');
+
+Utilize as funções de acordo com cada rota 
+app.get('/produto/cadastrar', ProdutoController.criarProduto);
+app.get('/produto', ProdutoController.exibirProduto);
